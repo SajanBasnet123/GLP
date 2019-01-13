@@ -253,7 +253,7 @@ namespace Paint
                 pnt[4].X = mouseX;
                 pnt[4].Y = mouseY;
                 g.DrawPolygon(myPen, pnt);
-
+                
             }
         }
 
