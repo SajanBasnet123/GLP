@@ -759,20 +759,27 @@ namespace Paint
 
         private int GetLoopEndLineNumber()
         {
-            int numberOfLines = txtCommand.Lines.Length;
-            int lineNum = 0;
-
-            for (int i = 0; i < numberOfLines; i++)
+            try
             {
-                String oneLineCommand = txtCommand.Lines[i];
-                oneLineCommand = oneLineCommand.Trim();
-                if (oneLineCommand.ToLower().Equals("endloop"))
-                {
-                    lineNum = i + 1;
+                int numberOfLines = txtCommand.Lines.Length;
+                int lineNum = 0;
 
+                for (int i = 0; i < numberOfLines; i++)
+                {
+                    String oneLineCommand = txtCommand.Lines[i];
+                    oneLineCommand = oneLineCommand.Trim();
+                    if (oneLineCommand.ToLower().Equals("endloop"))
+                    {
+                        lineNum = i + 1;
+
+                    }
                 }
+                return lineNum;
             }
-            return lineNum;
+            catch(Exception e)
+            {
+                return 0;
+            }
         }
 
         private int GetLoopStartLineNumber()
