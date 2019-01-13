@@ -897,7 +897,6 @@ namespace Paint
         }
 
 
-
         private void DrawCircle(int radius)
         {
             Pen myPen = new Pen(mainColor);
