@@ -885,11 +885,18 @@ namespace Paint
 
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void DrawRectangle(int width, int height)
         {            
             Pen myPen = new Pen(mainColor);
             g.DrawRectangle(myPen, mouseX - width / 2, mouseY - height / 2, width, height);
         }
+
+
 
         private void DrawCircle(int radius)
         {
